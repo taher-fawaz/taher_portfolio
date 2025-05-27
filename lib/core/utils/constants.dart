@@ -29,9 +29,9 @@ class AppConstants {
 
   static const _svg = _assets + "svg/";
   static const guySvg = _svg + "guy.svg";
-  static const personSvg = _svg + "person.svg";
-
   static const _images = _assets + "images/";
+
+  static const personPng = _images + "profile.png";
 
   static const _techImages = _images + "technology/";
   static const flutterImage = _techImages + "flutter.png";

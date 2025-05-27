@@ -7,19 +7,19 @@ class Particle {
   double xCoor;
   double yCoor;
   final double size;
-  double xDirection;
-  double yDirection;
-  static double widgetWidth;
-  static double widgetHeight;
+  double xDirection = 0.0;
+  double yDirection = 0.0;
+  static double widgetWidth = 0.0;
+  static double widgetHeight = 0.0;
   static double connectDistance = 100.0;
   static double speedUp = 3.0;
-  Random random = new Random();
+  Random random = Random();
 
   Particle({
-    this.color,
-    this.xCoor,
-    this.yCoor,
-    this.size,
+    required this.color,
+    required this.xCoor,
+    required this.yCoor,
+    required this.size,
   });
 
   bool isNear(Particle anotherParticle) {

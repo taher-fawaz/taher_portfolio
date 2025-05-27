@@ -17,6 +17,7 @@ import 'package:taher_portfolio/pages/home/components/header.dart';
 import 'package:taher_portfolio/pages/home/components/portfolio_stats.dart';
 import 'package:taher_portfolio/pages/home/components/project.dart';
 import 'package:taher_portfolio/pages/home/components/service.dart';
+import 'package:taher_portfolio/pages/particle_flutter/particle_page.dart';
 import 'package:taher_portfolio/provider/amplitude.dart';
 import 'package:taher_portfolio/provider/home.dart';
 import 'package:taher_portfolio/provider/theme.dart';
@@ -52,6 +53,7 @@ class _HomeState extends ConsumerState<Home>
   Widget _buildPage() {
     return Stack(
       children: [
+        ParticleBackgroundPage(),
         ScrollConfiguration(
           behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
           child: SingleChildScrollView(
