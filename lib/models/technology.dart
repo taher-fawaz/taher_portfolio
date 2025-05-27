@@ -1,4 +1,5 @@
 import 'package:taher_portfolio/core/utils/constants.dart';
+import 'package:taher_portfolio/core/utils/constants.dart';
 
 class TechnologyModel {
   final String name;
@@ -8,32 +9,37 @@ class TechnologyModel {
 }
 
 class TechnologyConstants {
-  static TechnologyModel python =
-      TechnologyModel("Python", AppConstants.pythonImage);
-  static TechnologyModel php = TechnologyModel("Python", AppConstants.phpImage);
   static TechnologyModel flutter =
       TechnologyModel("Flutter", AppConstants.flutterImage);
-  static TechnologyModel flask =
-      TechnologyModel("Flask", AppConstants.flaskImage);
-  static TechnologyModel firebase =
-      TechnologyModel("Firebase", AppConstants.firebaseImage);
-  static TechnologyModel razorPay =
-      TechnologyModel("Razor Pay", AppConstants.razorPayImage);
-  static TechnologyModel cPlus =
-      TechnologyModel("C++", AppConstants.cPlusImage);
-  static TechnologyModel javascript =
-      TechnologyModel("Javascript", AppConstants.javascriptImage);
+  static TechnologyModel dart = TechnologyModel("Dart", AppConstants.dartImage);
+  static TechnologyModel kotlin =
+      TechnologyModel("Kotlin", AppConstants.kotlinImage);
   static TechnologyModel swift =
       TechnologyModel("Swift", AppConstants.swiftImage);
-  static TechnologyModel sceneKit =
-      TechnologyModel("SceneKit", AppConstants.sceneKitImage);
+  static TechnologyModel firebase =
+      TechnologyModel("Firebase", AppConstants.firebaseImage);
+  static TechnologyModel git = TechnologyModel("Git", AppConstants.gitImage);
+  static TechnologyModel figma =
+      TechnologyModel("Figma", AppConstants.figmaImage);
+  static TechnologyModel restApi =
+      TechnologyModel("REST API", AppConstants.restApiImage);
+  static TechnologyModel riverpod =
+      TechnologyModel("Riverpod", AppConstants.riverpodImage);
+  static TechnologyModel bloc = TechnologyModel("BLoC", AppConstants.blocImage);
+  static TechnologyModel provider =
+      TechnologyModel("Provider", AppConstants.providerImage);
+  static TechnologyModel getx = TechnologyModel("GetX", AppConstants.getxImage);
 
   static List<TechnologyModel> technologyLearned = [
     flutter,
+    dart,
+    kotlin,
     swift,
-    cPlus,
-    python,
-    javascript,
-    flask
+    firebase,
+    git,
+    figma,
+    restApi,
+    riverpod,
+    bloc,
   ];
 }

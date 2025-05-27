@@ -16,11 +16,14 @@ double getMobileMaxWidth(BuildContext context) =>
 
 class AppConstants {
   static const linkedInUrl =
-      "https://www.linkedin.com/in/agnel-selvan-328421192/";
-  static const instagramUrl = "https://www.instagram.com/_agnel.selvan_/";
-  static const githubUrl = "https://github.com/AgnelSelvan";
-  static const mediumUrl = "https://medium.com/@agnelselvan";
-
+      "https://www.linkedin.com/in/taher-fawaz-0141b9168/"; // Update with your LinkedIn
+  static const youtubeUrl =
+      "https://www.youtube.com/@taherfawaz4994/"; // Update with your Instagram
+  static const githubUrl =
+      "https://github.com/taher-fawaz"; // Update with your GitHub
+  static const mediumUrl =
+      "https://medium.com/@taher.abd1010"; // Update with your Medium
+  static const tiktokUrl = "https://www.tiktok.com/@taher_t10";
   static const _assets = "assets/";
   static const _outputs = "outputs/";
 
@@ -30,34 +33,28 @@ class AppConstants {
 
   static const _images = _assets + "images/";
 
-//   static const _socialImages = _images + "social/";
-  // static const emailImage = _socialImages + "email.png";
-  // static const linkedInImage = _socialImages + "linkedin-logo.png";
-  // static const instaImage = _socialImages + "instagram.png";
-  // static const githubImage = _socialImages + "github.png";
-  // static const mediumImage = _socialImages + "medium.png";
-
   static const _techImages = _images + "technology/";
   static const flutterImage = _techImages + "flutter.png";
-  static const pythonImage = _techImages + "python.png";
-  static const phpImage = _techImages + "php.png";
-  static const flaskImage = _techImages + "flask.png";
-  static const firebaseImage = _techImages + "firebase.png";
-  static const razorPayImage = _techImages + "razorpay.png";
-  static const cPlusImage = _techImages + "c++.png";
+  static const dartImage = _techImages + "dart.png";
+  static const kotlinImage = _techImages + "kotlin.png";
   static const swiftImage = _techImages + "swift.png";
-  static const sceneKitImage = _techImages + "scenekit.jpeg";
-  static const javascriptImage = _techImages + "javascript.png";
+  static const firebaseImage = _techImages + "firebase.png";
+  static const gitImage = _techImages + "git.png";
+  static const figmaImage = _techImages + "figma.png";
+  static const restApiImage = _techImages + "rest_api.png";
+  static const riverpodImage = _techImages + "riverpod.png";
+  static const blocImage = _techImages + "bloc.png";
+  static const providerImage = _techImages + "provider.jpg";
+  static const getxImage = _techImages + "getx.jpg";
 
   static const _projectsImages = _images + "projects/";
-  static const smartStoreImage = _projectsImages + "1.jpeg";
-  static const crossTheRoadImage = _projectsImages + "2.jpeg";
-  static const newsUpImage = _projectsImages + "3.jpeg";
-  static const musicLabImage = _projectsImages + "4.jpeg";
-  static const personalFaceImage = _projectsImages + "5.jpeg";
-  static const computerStoreImage = _projectsImages + "6.jpeg";
-  static const jsonToDartImage = _projectsImages + "7.png";
-  static const simulationImage = _projectsImages + "8.png";
+  static const sanadAppImage = _projectsImages + "sanad.jpg";
+  static const hesabateImage = _projectsImages + "hesabate.png";
+  static const ezenessImage = _projectsImages + "ezeness.jpg";
+  static const safeToNetImage = _projectsImages + "safetonet.png";
+  static const flairstechSuiteImage = _projectsImages + "flairstech_suite.jpg";
+  static const ntgAppsImage = _projectsImages + "ntg.png";
+  static const vayRollAppImage = _projectsImages + "vayroll.png";
 
   static const _gifs = _outputs + "gif/";
   static const portfolioGif = _gifs + "mobile.gif";
@@ -76,10 +73,10 @@ class AppConstants {
           Utilty.openUrl(linkedInUrl);
         }),
     NameOnTap(
-        title: "Instagram",
-        iconData: FontAwesomeIcons.instagram,
+        title: "YouTube",
+        iconData: FontAwesomeIcons.youtube,
         onTap: () {
-          Utilty.openUrl(instagramUrl);
+          Utilty.openUrl(youtubeUrl);
         }),
     NameOnTap(
         title: "Github",
@@ -92,6 +89,12 @@ class AppConstants {
         iconData: FontAwesomeIcons.medium,
         onTap: () {
           Utilty.openUrl(mediumUrl);
+        }),
+    NameOnTap(
+        title: "TikTok",
+        iconData: FontAwesomeIcons.tiktok,
+        onTap: () {
+          Utilty.openUrl(tiktokUrl);
         }),
   ];
 }

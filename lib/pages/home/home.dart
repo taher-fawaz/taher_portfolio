@@ -17,7 +17,7 @@ import 'package:taher_portfolio/pages/home/components/header.dart';
 import 'package:taher_portfolio/pages/home/components/portfolio_stats.dart';
 import 'package:taher_portfolio/pages/home/components/project.dart';
 import 'package:taher_portfolio/pages/home/components/service.dart';
-import 'package:taher_portfolio/provider/amplitutde.dart';
+import 'package:taher_portfolio/provider/amplitude.dart';
 import 'package:taher_portfolio/provider/home.dart';
 import 'package:taher_portfolio/provider/theme.dart';
 import 'package:taher_portfolio/widgets/switch.dart';
@@ -32,7 +32,7 @@ class Home extends ConsumerStatefulWidget {
 class _HomeState extends ConsumerState<Home>
     with SingleTickerProviderStateMixin {
   late HomeProvider _homeProvider;
-  late AmplitutdeProvider _amplitutdeProvider;
+  late AmplitudeProvider _amplitutdeProvider;
   final ScrollController scrollController = ScrollController();
 
   @override

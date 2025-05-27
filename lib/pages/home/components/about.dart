@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
@@ -58,7 +60,7 @@ class _AboutSectionState extends State<AboutSection> {
                         height: 25.0,
                       ),
                       Text(
-                        "I'm Agnel Selvan, A Flutter and iOS Developer and Technical Blog Writer",
+                        "I'm Taher Fawaz, A Senior Mobile Application Developer",
                         style: GoogleFonts.josefinSans(
                           fontWeight: FontWeight.bold,
                           height: 1.3,
@@ -69,7 +71,7 @@ class _AboutSectionState extends State<AboutSection> {
                         height: 10.0,
                       ),
                       const Text(
-                        "I have done my Computer Science graduation at Xavier's Institute of Engineering on 2021. I have been developing Mobile Apps for more than 1 years now. I have worked as a Team and as an Indivual in various organization and launched the apps in Playstore as well as in Appstore. In my free time I use to write Technical Blog in Medium. Always love to learn new technologies and to succeed in an environment of growth and excellence and earn a job which provides me job satisfaction and self-development and help me achieve personal as well as organisational goals.",
+                        "I’m a passionate and results-driven Senior Mobile Application Developer with over 6 years of experience building and maintaining high-performance mobile apps. My expertise spans both native Android development (Java/Kotlin) and cross-platform development using Flutter. I hold a Bachelor of Engineering from the Higher Institute for Engineering & Technology in 6th October City (2018). I have a solid track record in crafting user-friendly mobile experiences, integrating robust backend services (REST APIs, Firebase), and applying state management solutions like Provider, Bloc, Riverpod, and GetX. I thrive in agile environments and am committed to delivering scalable and maintainable code that powers impactful mobile solutions.",
                         style: TextStyle(
                           color: kCaptionColor,
                           height: 1.5,
@@ -80,7 +82,7 @@ class _AboutSectionState extends State<AboutSection> {
                         height: 20.0,
                       ),
                       const Text(
-                        "Technology I have worked with",
+                        "Technologies I have worked with",
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -92,50 +94,48 @@ class _AboutSectionState extends State<AboutSection> {
                       Consumer(builder: (context, ref, _) {
                         return ScrollConfiguration(
                           behavior: ScrollConfiguration.of(context)
-                              .copyWith(scrollbars: false),
+                              .copyWith(scrollbars: true, dragDevices: {
+                            PointerDeviceKind.touch,
+                            PointerDeviceKind.mouse,
+                          }),
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: TechnologyConstants.technologyLearned
-                                  .map((e) => MouseRegion(
-                                        cursor: SystemMouseCursors.click,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            color: ref
-                                                    .watch(themeProvider)
-                                                    .isDarkMode
-                                                ? Colors.grey[800]
-                                                : Colors.grey[200],
-                                            borderRadius:
-                                                BorderRadius.circular(4.0),
-                                          ),
-                                          margin: const EdgeInsets.symmetric(
-                                              horizontal: 5),
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 8.0, vertical: 6),
-                                          child: InkWell(
-                                            onTap: () {},
-                                            child: Center(
-                                              child: Row(
-                                                children: [
-                                                  SizedBox(
-                                                      width: 20,
-                                                      height: 20,
-                                                      child:
-                                                          Image.asset(e.logo)),
-                                                  const SizedBox(
-                                                    width: 10,
+                                  .map((e) => Container(
+                                        decoration: BoxDecoration(
+                                          color: ref
+                                                  .watch(themeProvider)
+                                                  .isDarkMode
+                                              ? Colors.grey[800]
+                                              : Colors.grey[200],
+                                          borderRadius:
+                                              BorderRadius.circular(4.0),
+                                        ),
+                                        margin: const EdgeInsets.symmetric(
+                                            horizontal: 5),
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 8.0, vertical: 6),
+                                        child: InkWell(
+                                          onTap: () {},
+                                          child: Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(
+                                                    width: 20,
+                                                    height: 20,
+                                                    child: Image.asset(e.logo)),
+                                                const SizedBox(
+                                                  width: 10,
+                                                ),
+                                                Text(
+                                                  e.name,
+                                                  style: const TextStyle(
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.bold,
                                                   ),
-                                                  Text(
-                                                    e.name,
-                                                    style: const TextStyle(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                         ),

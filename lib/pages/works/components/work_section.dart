@@ -119,7 +119,7 @@ class WorkSection extends StatelessWidget {
                               .map((e) => Container(
                                     margin: const EdgeInsets.all(10),
                                     width: 25,
-                                    color: e.logo == AppConstants.razorPayImage
+                                    color: e.logo == AppConstants.restApiImage
                                         ? Colors.white
                                         : null,
                                     height: 25,

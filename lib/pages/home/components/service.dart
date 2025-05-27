@@ -22,8 +22,8 @@ final List<DesignProcess> designProcesses = [
     subtitle: "",
   ),
   DesignProcess(
-    title: "Document It",
-    imagePath: "assets/images/blog.png",
+    title: "Deploy",
+    imagePath: "assets/images/deploy.png",
     subtitle: "",
   ),
 ];
@@ -32,24 +32,34 @@ class ServiceSection extends StatelessWidget {
   ServiceSection({Key? key}) : super(key: key);
   final whatIDo = [
     NameIconColor(
-      title: "Mobile App Development",
+      title: "Native Mobile App Development",
       iconData: Icons.mobile_friendly,
       color: Colors.green[400]!,
     ),
     NameIconColor(
-      title: "Web Development",
-      iconData: Icons.web,
-      color: Colors.yellow[400]!,
-    ),
-    NameIconColor(
-      title: "Technical Blog Writer",
-      iconData: Icons.article,
+      title: "Cross-Platform Development",
+      iconData: Icons.devices,
       color: Colors.blue[400]!,
     ),
     NameIconColor(
-      title: "Github Open Source",
-      iconData: Icons.code,
+      title: "UI/UX Development",
+      iconData: Icons.design_services,
+      color: Colors.purple[400]!,
+    ),
+    NameIconColor(
+      title: "API Integration",
+      iconData: Icons.api,
       color: Colors.orange[400]!,
+    ),
+    NameIconColor(
+      title: "Game Development",
+      iconData: Icons.games_rounded,
+      color: Colors.red[400]!,
+    ),
+    NameIconColor(
+      title: "App Store & Play Store Deployment",
+      iconData: Icons.cloud_upload,
+      color: Colors.teal[400]!,
     ),
   ];
 
@@ -77,7 +87,7 @@ class ServiceSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Productive ,\n   Experienced",
+                "Experienced,\n   Professional",
                 style: GoogleFonts.josefinSans(
                   fontWeight: FontWeight.w900,
                   height: 1.8,
@@ -87,8 +97,9 @@ class ServiceSection extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
+                  // Update with your CV link
                   Utilty.openUrl(
-                      "https://github.com/AgnelSelvan/AgnelSelvan.github.io/raw/main/assets/files/Agnel-Selvan.pdf");
+                      "https://drive.google.com/file/d/your-cv-link/view");
                 },
                 child: MouseRegion(
                   cursor: SystemMouseCursors.click,
@@ -119,7 +130,7 @@ class ServiceSection extends StatelessWidget {
             height: 5,
           ),
           Text(
-            "I may not be perfect, but I'm surely of some help",
+            "Creating innovative mobile solutions with modern technologies",
             style: GoogleFonts.josefinSans(
               color: Colors.grey[400],
               fontSize: 14.0,
@@ -160,7 +171,7 @@ class ServiceSection extends StatelessWidget {
                                 child: Icon(
                                   e.iconData,
                                   color: e.color,
-                                  size: 52,
+                                  size: 40,
                                 ),
                               ),
                               const SizedBox(
@@ -173,7 +184,7 @@ class ServiceSection extends StatelessWidget {
                                   color: ref.watch(themeProvider).isDarkMode
                                       ? Colors.grey[400]
                                       : Colors.grey[800],
-                                  fontSize: 20,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w800,
                                 ),
                               )
@@ -212,9 +223,14 @@ class ServiceSection extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.asset(
-                                designProcesses[index].imagePath,
-                                width: 40.0,
+                              Consumer(
+                                builder: (context, ref, _) => Image.asset(
+                                  designProcesses[index].imagePath,
+                                  width: 40.0,
+                                  color: ref.watch(themeProvider).isDarkMode
+                                      ? Colors.white
+                                      : Colors.black,
+                                ),
                               ),
                               const SizedBox(
                                 width: 15.0,

@@ -1,11 +1,11 @@
 {
-    "name": "taher_portfolio",
-    "short_name": "taher_portfolio",
+    "name": "Taher Fawaz Portfolio",
+    "short_name": "Taher Portfolio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "theme_color": "#FFD800",
+    "description": "Senior Mobile Application Developer with 5+ years experience in Flutter, Android, and iOS development.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

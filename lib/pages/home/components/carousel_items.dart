@@ -25,7 +25,7 @@ List<CarouselItemModel> carouselItems(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      "Mobile Application Developer",
+                      "Senior Mobile Application Developer",
                       style: GoogleFonts.josefinSans(
                         color: kPrimaryColor,
                         fontWeight: FontWeight.w900,
@@ -37,7 +37,7 @@ List<CarouselItemModel> carouselItems(
                       height: 18.0,
                     ),
                     Text(
-                      "Agnel Selvan".toUpperCase(),
+                      "Taher Fawaz".toUpperCase(),
                       style: GoogleFonts.josefinSans(
                         fontSize: 40.0,
                         fontWeight: FontWeight.w900,
@@ -51,7 +51,7 @@ List<CarouselItemModel> carouselItems(
                     const Row(
                       children: [
                         Text(
-                          "Software Engineer, ",
+                          "Flutter Developer, ",
                           style: TextStyle(
                             color: kCaptionColor,
                             fontSize: 15.0,
@@ -70,7 +70,7 @@ List<CarouselItemModel> carouselItems(
                           width: 2,
                         ),
                         Text(
-                          "Mumbai",
+                          "Cairo, Egypt",
                           style: TextStyle(
                             color: kCaptionColor,
                             fontSize: 15.0,
@@ -94,7 +94,6 @@ List<CarouselItemModel> carouselItems(
                       child: TextButton(
                         onPressed: () {
                           context.pushNamed(Routes.videoDownloader);
-                          //   Utilty.openUrl(AppConstants.linkedInUrl);
                         },
                         child: Text(
                           "Let's Talk",
@@ -128,7 +127,6 @@ List<CarouselItemModel> carouselItems(
                                       width: 30,
                                       height: 30,
                                       margin: const EdgeInsets.all(5),
-                                      // child: Image.asset(e.title),
                                       child: Center(
                                         child: FaIcon(
                                           e.iconData,
@@ -155,8 +153,8 @@ List<CarouselItemModel> carouselItems(
           ),
         ),
         image: Container(
-          child:
-              SvgPicture.asset(AppConstants.guySvg, semanticsLabel: 'Guy Logo'),
+          child: SvgPicture.asset(AppConstants.guySvg,
+              semanticsLabel: 'Developer'),
         ),
       ),
     );

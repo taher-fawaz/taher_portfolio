@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:taher_portfolio/core/extensions/list.dart';
 import 'package:taher_portfolio/core/extensions/string.dart';
 import 'package:taher_portfolio/core/utils/constants.dart';
-import 'package:taher_portfolio/provider/amplitutde.dart';
+import 'package:taher_portfolio/provider/amplitude.dart';
 
 class JsonToDartScreen extends ConsumerStatefulWidget {
   const JsonToDartScreen({super.key});
@@ -19,7 +19,7 @@ class _JsonToDartScreenState extends ConsumerState<JsonToDartScreen> {
   TextEditingController classNameController = TextEditingController();
   TextEditingController controller = TextEditingController();
   String output = "";
-  late AmplitutdeProvider _amplitutdeProvider;
+  late AmplitudeProvider _amplitutdeProvider;
 
   @override
   void initState() {

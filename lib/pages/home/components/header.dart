@@ -30,7 +30,7 @@ class HeaderLogo extends StatelessWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: "A ",
+                    text: "Taher ",
                     style: GoogleFonts.josefinSans(
                       fontSize: 26.0,
                       fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class HeaderLogo extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: "Dev",
+                    text: "Fawaz",
                     style: GoogleFonts.josefinSans(
                       color: kPrimaryColor,
                       fontSize: 26.0,
@@ -77,7 +77,7 @@ class HeaderRow extends StatelessWidget {
         NameOnTap(
           title: "Services",
           onTap: () {},
-          iconData: Icons.school,
+          iconData: Icons.engineering,
         ),
         NameOnTap(
           title: "Works",
@@ -90,7 +90,7 @@ class HeaderRow extends StatelessWidget {
           iconData: Icons.contact_mail,
         ),
         NameOnTap(
-          title: "Blogs",
+          title: "Blog",
           onTap: () {
             Utilty.openUrl(AppConstants.mediumUrl);
           },
@@ -134,7 +134,7 @@ class HeaderRow extends StatelessWidget {
                               child: Text(
                                 item.title,
                                 style: TextStyle(
-                                  color: item.title == "Blogs"
+                                  color: item.title == "Blog"
                                       ? kPrimaryColor
                                       : null,
                                   fontSize: 14.0,

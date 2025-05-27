@@ -16,14 +16,12 @@ class MyApp extends StatelessWidget {
               ? MyThemes.darkTheme
               : MyThemes.lightTheme,
           child: MaterialApp.router(
-            title: "Agnel Selvan",
+            title: "Taher Fawaz - Mobile Developer",
             debugShowCheckedModeBanner: false,
             themeMode: ref.watch(themeProvider).themeMode,
             theme: MyThemes.lightTheme,
             darkTheme: MyThemes.darkTheme,
             routerConfig: RouterGenerator.router,
-            // initialRoute: Routes.initial,
-            // onGenerateRoute: RouterGenerator.generateRoute,
           ),
         );
       },

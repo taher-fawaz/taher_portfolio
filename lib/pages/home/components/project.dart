@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -25,7 +27,11 @@ class ProjectSection extends StatelessWidget {
 
   Widget _buildUi(double width, BuildContext context) {
     return ScrollConfiguration(
-      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      behavior: ScrollConfiguration.of(context)
+          .copyWith(scrollbars: false, dragDevices: {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      }),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -134,10 +140,9 @@ class ProjectSection extends StatelessWidget {
                                 .map((e) => Container(
                                       margin: const EdgeInsets.all(10),
                                       width: 25,
-                                      color:
-                                          e.logo == AppConstants.razorPayImage
-                                              ? Colors.white
-                                              : null,
+                                      color: e.logo == AppConstants.restApiImage
+                                          ? Colors.white
+                                          : null,
                                       height: 25,
                                       child: Image.asset(e.logo),
                                     ))

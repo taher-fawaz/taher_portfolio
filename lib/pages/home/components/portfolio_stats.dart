@@ -6,11 +6,10 @@ import 'package:taher_portfolio/models/stat.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 final List<Stat> stats = [
-  Stat(count: "5+", text: "Projects"),
-  Stat(count: "4", text: "Awards"),
-  Stat(
-      count: (DateTime.now().year - 2021).toString(),
-      text: "Years\nExperience"),
+  Stat(count: "9+", text: "Projects\nCompleted"),
+  Stat(count: "5+", text: "Years\nExperience"),
+  Stat(count: "6+", text: "Companies\nWorked"),
+  Stat(count: "3", text: "Countries\nExperience"),
 ];
 
 class PortfolioStats extends StatelessWidget {
@@ -42,7 +41,6 @@ class PortfolioStats extends StatelessWidget {
               children: stats.map((stat) {
                 return Container(
                   padding: const EdgeInsets.symmetric(vertical: 15.0),
-                  // Just use the helper here really
                   width: ScreenHelper.isMobile(context)
                       ? constraint.maxWidth / 2.0 - 20
                       : (constraint.maxWidth / 4.0 - 20),
