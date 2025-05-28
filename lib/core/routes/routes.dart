@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:life_from_simple_rules/screens/home.dart';
 import 'package:sand_simulation/home.dart';
 import 'package:taher_portfolio/core/utils/constants.dart';
+import 'package:taher_portfolio/pages/courses/courses_page.dart';
 import 'package:taher_portfolio/pages/demo/demo.dart';
 import 'package:taher_portfolio/pages/home/home.dart';
 import 'package:taher_portfolio/pages/home/smart_bill_book/smart_bill_book.dart';
@@ -19,6 +20,7 @@ class Routes {
   static const String jsonToDart = "json_to_dart";
   static const String videoDownloader = "video_downloader";
   static const String smartBillBookPrivacy = "smart_bill_book/privacy";
+  static const String courses = "courses";
 }
 
 class RouterGenerator {
@@ -60,12 +62,12 @@ class RouterGenerator {
             builder: (context, state) =>
                 const _AppResponsiveBuilder(child: JsonToDartScreen()),
           ),
-          // GoRoute(
-          //   path: Routes.videoDownloader,
-          //   name: Routes.videoDownloader,
-          //   builder: (context, state) =>
-          //       const _AppResponsiveBuilder(child: VideoDownloaderScreen()),
-          // ),
+          GoRoute(
+            path: Routes.courses,
+            name: Routes.courses,
+            builder: (context, state) =>
+                const _AppResponsiveBuilder(child: CoursesPage()),
+          ),
           GoRoute(
             path: Routes.smartBillBookPrivacy,
             name: Routes.smartBillBookPrivacy,

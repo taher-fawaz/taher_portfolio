@@ -10,6 +10,7 @@ import 'package:taher_portfolio/core/utils/constants.dart';
 import 'package:taher_portfolio/core/utils/globals.dart';
 import 'package:taher_portfolio/core/utils/screen_helper.dart';
 import 'package:taher_portfolio/models/project.dart';
+import 'package:taher_portfolio/pages/courses/course_card.dart';
 import 'package:taher_portfolio/pages/home/components/about.dart';
 import 'package:taher_portfolio/pages/home/components/carousel.dart';
 import 'package:taher_portfolio/pages/home/components/footer.dart';
@@ -142,6 +143,11 @@ class _HomeState extends ConsumerState<Home>
                 ProjectSection(
                   projects: ProjectModel.projects.take(4).toList(),
                 ),
+                const SizedBox(
+                  height: 80,
+                ),
+                // Courses Section
+                CoursesSection(),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 28.0),
                   child: PortfolioStats(),
@@ -149,6 +155,7 @@ class _HomeState extends ConsumerState<Home>
                 const SizedBox(
                   height: 50.0,
                 ),
+
                 Footer(
                   key: _homeProvider.contactKey,
                 )

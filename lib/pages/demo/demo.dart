@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:taher_portfolio/models/project.dart';
+import 'package:taher_portfolio/pages/courses/course_card.dart';
 import 'package:taher_portfolio/pages/demo/components/demo_section.dart';
 import 'package:taher_portfolio/pages/home/components/footer.dart';
 import 'package:taher_portfolio/core/utils/screen_helper.dart';
@@ -71,6 +72,11 @@ class _DemoScreenState extends ConsumerState<DemoScreen> {
                 DemoSection(
                   projects: ProjectModel.demos,
                 ),
+                const SizedBox(
+                  height: 80,
+                ),
+                //courses section
+                CoursesSection(),
                 const Footer()
               ],
             ),
